@@ -3,6 +3,7 @@ import EleosHero from '@/components/EleosHero';
 import EleosAbout from '@/components/EleosAbout';
 import EleosServices from '@/components/EleosServices';
 import EleosTestimonials from '@/components/EleosTestimonials';
+import EleosContact from '@/components/EleosContact';
 import EleosFooter from '@/components/EleosFooter';
 import SEO from '@/components/SEO';
 
@@ -19,6 +20,7 @@ const EleosIndex = () => {
       <EleosAbout />
       <EleosServices />
       <EleosTestimonials />
+      <EleosContact />
       <EleosFooter />
     </div>
   );

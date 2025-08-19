@@ -78,6 +78,8 @@ export default {
 			},
 			fontFamily: {
 				'space': ['Space Grotesk', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif'],
+				'display': ['Space Grotesk', 'sans-serif'],
 			},
 			keyframes: {
 				'accordion-down': {

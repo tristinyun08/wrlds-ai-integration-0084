@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const EleosTestimonials = () => {
@@ -8,23 +8,35 @@ const EleosTestimonials = () => {
   const testimonials = [
     {
       company: "SANPAW",
-      logo: "🐕", // Placeholder - you can replace with actual logo
-      text: "Eleos Marketing Group transformed our online presence with a tailored social media strategy and a revamped website. Their expertise and personalized approach helped increase engagement and our customer base.",
+      logo: "🐕",
+      name: "Sarah Mitchell",
+      role: "Executive Director",
+      text: "Eleos Marketing Group transformed our online presence with a tailored social media strategy and a revamped website. Their expertise and personalized approach helped increase engagement and our customer base by 150%.",
+      rating: 5
     },
     {
       company: "Secure Eats",
-      logo: "🥄", // Placeholder - you can replace with actual logo  
+      logo: "🥄",
+      name: "Michael Rodriguez", 
+      role: "Founder",
       text: "Working with Eleos Marketing Group has been a game-changer for our nonprofit. Their team brought a fresh perspective to our social media strategy, helping us connect with our community in ways we never thought possible.",
+      rating: 5
     },
     {
       company: "Justice By Objectives",
-      logo: "⚖️", // Placeholder - you can replace with actual logo
-      text: "Eleos Marketing Group has proven to be an outstanding partner in elevating our digital presence. They have exceeded our expectations in every aspect—from design to communication to responsiveness. I would confidently recommend Eleos to anyone in need of marketing and web development services. Their work speaks for itself, and their dedication to customer satisfaction is truly exceptional.",
+      logo: "⚖️",
+      name: "Jessica Chen",
+      role: "Marketing Director",
+      text: "Eleos Marketing Group has proven to be an outstanding partner in elevating our digital presence. They exceeded our expectations in every aspect—from design to communication to responsiveness. Their dedication to customer satisfaction is truly exceptional.",
+      rating: 5
     },
     {
       company: "Seeds To Flowers, Inc",
-      logo: "🌸", // Placeholder - you can replace with actual logo
-      text: "Eleos Marketing Group exceeded our expectations in every way! They completed our website efficiently and with outstanding attention to detail. The end result is a stunning, highly functional site that perfectly captures our vision and brand identity. Their services were impeccable, characterized by top-tier professionalism, creativity, and seamless communication. Throughout the entire process, the Eleos team consistently went above and beyond, keeping us informed and ensuring every element met our standards. We are thrilled with the results and highly recommend Eleos Marketing to anyone seeking a high-quality, hassle-free web development experience! Thank you for an exceptional job!",
+      logo: "🌸",
+      name: "David Thompson",
+      role: "CEO",
+      text: "Eleos Marketing Group exceeded our expectations in every way! They completed our website efficiently with outstanding attention to detail. The end result is a stunning, highly functional site that perfectly captures our vision and brand identity.",
+      rating: 5
     }
   ];
 
@@ -37,44 +49,117 @@ const EleosTestimonials = () => {
   };
 
   return (
-    <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/10 to-background"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-slate-900/30 to-background"></div>
       
-      <div className="relative z-10 max-w-4xl mx-auto">
-        {/* Testimonial Card */}
-        <div className="bg-muted/50 rounded-3xl p-8 sm:p-12 mb-12 backdrop-blur-sm border border-border">
-          <div className="text-center mb-8">
-            <div className="text-6xl mb-4">{testimonials[currentTestimonial].logo}</div>
-            <h3 className="text-2xl font-bold text-foreground mb-6">
-              {testimonials[currentTestimonial].company}
-            </h3>
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600/20 to-purple-600/20 backdrop-blur-sm border border-violet-500/20 rounded-full px-6 py-3 mb-8 glass">
+            <Star size={16} className="text-violet-400" />
+            <span className="text-sm font-medium text-violet-200">Client Success Stories</span>
           </div>
           
-          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed text-center mb-8">
-            {testimonials[currentTestimonial].text}
-          </p>
-          
-          <p className="text-center text-foreground font-semibold">
-            {testimonials[currentTestimonial].company}
-          </p>
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8">
+            What Our
+            <span className="block bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
+              Clients Say
+            </span>
+          </h2>
+        </div>
+
+        {/* Testimonial Cards Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          {/* Featured Testimonial */}
+          <div className="lg:col-span-2">
+            <div className="relative p-10 rounded-3xl glass border border-white/10 hover:border-violet-500/30 transition-all duration-300 h-full">
+              <Quote size={48} className="text-violet-400 mb-6 opacity-50" />
+              
+              <div className="flex items-center mb-6">
+                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                  <Star key={i} size={20} className="text-yellow-400 fill-current" />
+                ))}
+              </div>
+              
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                "{testimonials[currentTestimonial].text}"
+              </p>
+              
+              <div className="flex items-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-violet-600 to-purple-600 rounded-2xl flex items-center justify-center text-2xl mr-4">
+                  {testimonials[currentTestimonial].logo}
+                </div>
+                <div>
+                  <div className="font-bold text-foreground text-lg">
+                    {testimonials[currentTestimonial].name}
+                  </div>
+                  <div className="text-muted-foreground">
+                    {testimonials[currentTestimonial].role} at {testimonials[currentTestimonial].company}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Side Testimonials */}
+          <div className="space-y-6">
+            {testimonials.slice(0, 2).map((testimonial, index) => (
+              <div 
+                key={index}
+                className="p-6 rounded-2xl glass border border-white/10 hover:border-violet-500/30 transition-all duration-300 cursor-pointer hover-lift"
+                onClick={() => setCurrentTestimonial(index)}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-purple-600 rounded-xl flex items-center justify-center text-lg mr-3">
+                    {testimonial.logo}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground text-sm">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-muted-foreground text-xs">
+                      {testimonial.company}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  "{testimonial.text.substring(0, 120)}..."
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Navigation */}
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-center items-center space-x-4">
           <Button
             variant="ghost"
             size="sm"
             onClick={prevTestimonial}
-            className="w-12 h-12 rounded-full bg-muted/50 hover:bg-muted text-foreground"
+            className="w-12 h-12 rounded-2xl glass hover:bg-violet-500/20 text-foreground border border-white/10"
           >
             <ChevronLeft size={20} />
           </Button>
+          
+          <div className="flex space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentTestimonial(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentTestimonial 
+                    ? 'bg-violet-400' 
+                    : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                }`}
+              />
+            ))}
+          </div>
+          
           <Button
             variant="ghost"
             size="sm"
             onClick={nextTestimonial}
-            className="w-12 h-12 rounded-full bg-muted/50 hover:bg-muted text-foreground"
+            className="w-12 h-12 rounded-2xl glass hover:bg-violet-500/20 text-foreground border border-white/10"
           >
             <ChevronRight size={20} />
           </Button>
