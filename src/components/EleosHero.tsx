@@ -22,9 +22,9 @@ const EleosHero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600/20 to-purple-600/20 backdrop-blur-sm border border-violet-500/20 rounded-full px-6 py-3 mb-8 glass">
-          <Sparkles size={16} className="text-violet-400" />
-          <span className="text-sm font-medium text-violet-200">No-Cost Marketing Excellence</span>
+        <div className="inline-flex items-center gap-2 bg-gray-800/50 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8">
+          <Sparkles size={16} className="text-white" />
+          <span className="text-sm font-medium text-white">No-Cost Marketing Excellence</span>
         </div>
 
         <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold mb-8 leading-[0.9] tracking-tight">

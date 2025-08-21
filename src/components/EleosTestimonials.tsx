@@ -55,9 +55,9 @@ const EleosTestimonials = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600/20 to-purple-600/20 backdrop-blur-sm border border-violet-500/20 rounded-full px-6 py-3 mb-8 glass">
-            <Star size={16} className="text-violet-400" />
-            <span className="text-sm font-medium text-violet-200">Client Success Stories</span>
+          <div className="inline-flex items-center gap-2 bg-gray-800/50 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8">
+            <Star size={16} className="text-white" />
+            <span className="text-sm font-medium text-white">Client Success Stories</span>
           </div>
           
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8">
@@ -73,7 +73,7 @@ const EleosTestimonials = () => {
           {/* Featured Testimonial */}
           <div className="lg:col-span-2">
             <div className="relative p-10 rounded-3xl glass border border-white/10 hover:border-violet-500/30 transition-all duration-300 h-full">
-              <Quote size={48} className="text-violet-400 mb-6 opacity-50" />
+              <div className="text-6xl text-violet-400 mb-6 opacity-50 font-serif">"</div>
               
               <div className="flex items-center mb-6">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
@@ -81,7 +81,7 @@ const EleosTestimonials = () => {
                 ))}
               </div>
               
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              <p className="text-xl text-foreground leading-relaxed mb-8">
                 "{testimonials[currentTestimonial].text}"
               </p>
               
@@ -122,7 +122,7 @@ const EleosTestimonials = () => {
                     </div>
                   </div>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-foreground text-sm leading-relaxed">
                   "{testimonial.text.substring(0, 120)}..."
                 </p>
               </div>
@@ -159,7 +159,11 @@ const EleosTestimonials = () => {
             variant="ghost"
             size="sm"
             onClick={nextTestimonial}
-            className="w-12 h-12 rounded-2xl glass hover:bg-violet-500/20 text-foreground border border-white/10"
+            className={`w-12 h-12 rounded-2xl transition-all duration-300 ${
+              currentTestimonial === testimonials.length - 1
+                ? 'bg-violet-600 border-violet-600 text-white'
+                : 'glass hover:bg-violet-500/20 text-foreground border border-white/10'
+            }`}
           >
             <ChevronRight size={20} />
           </Button>

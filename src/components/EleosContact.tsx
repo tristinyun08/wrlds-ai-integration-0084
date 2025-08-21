@@ -13,9 +13,9 @@ const EleosContact = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600/20 to-purple-600/20 backdrop-blur-sm border border-violet-500/20 rounded-full px-6 py-3 mb-8 glass">
-            <Send size={16} className="text-violet-400" />
-            <span className="text-sm font-medium text-violet-200">Get In Touch</span>
+          <div className="inline-flex items-center gap-2 bg-gray-800/50 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8">
+            <Send size={16} className="text-white" />
+            <span className="text-sm font-medium text-white">Get In Touch</span>
           </div>
           
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8">
