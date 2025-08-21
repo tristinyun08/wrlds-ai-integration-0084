@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Megaphone, Globe, PenTool, BarChart3, Search, Smartphone } from "lucide-react";
 
 const EleosServices = () => {
@@ -7,42 +6,48 @@ const EleosServices = () => {
       icon: Megaphone,
       title: "Social Media Marketing",
       description: "Amplify your brand voice across all major platforms with engaging content strategies that build authentic communities and drive meaningful engagement.",
-      features: ["Content Strategy", "Community Management", "Influencer Campaigns", "Analytics & Reporting"]
+      features: ["Content Strategy", "Community Management", "Influencer Campaigns", "Analytics & Reporting"],
+      href: "/services/social-media-marketing"
     },
     {
       icon: Globe,
       title: "Web Design & Development", 
       description: "Create stunning, high-performing websites that convert visitors into supporters and customers with modern design and seamless user experiences.",
-      features: ["Responsive Design", "SEO Optimization", "Performance Optimization", "CMS Integration"]
+      features: ["Responsive Design", "SEO Optimization", "Performance Optimization", "CMS Integration"],
+      href: "/services/web-design-development"
     },
     {
       icon: PenTool,
       title: "Content Creation",
       description: "Develop compelling copy and long-form content that resonates with your audience, builds authority, and drives action across all channels.",
-      features: ["Brand Messaging", "Blog Content", "Email Campaigns", "Video Scripts"]
+      features: ["Brand Messaging", "Blog Content", "Email Campaigns", "Video Scripts"],
+      href: "/services/content-creation"
     },
     {
       icon: BarChart3,
       title: "Digital Strategy",
       description: "Comprehensive digital marketing strategies backed by data insights to maximize your ROI and achieve sustainable growth.",
-      features: ["Market Research", "Competitor Analysis", "KPI Tracking", "Campaign Optimization"]
+      features: ["Market Research", "Competitor Analysis", "KPI Tracking", "Campaign Optimization"],
+      href: "/services/digital-strategy"
     },
     {
       icon: Search,
       title: "SEO & SEM",
       description: "Increase your online visibility and drive qualified traffic through strategic search engine optimization and marketing campaigns.",
-      features: ["Keyword Research", "On-Page SEO", "Google Ads", "Local SEO"]
+      features: ["Keyword Research", "On-Page SEO", "Google Ads", "Local SEO"],
+      href: "/services/seo-sem"
     },
     {
       icon: Smartphone,
       title: "Mobile Marketing",
       description: "Reach your audience where they are with mobile-first strategies that drive engagement and conversions on all devices.",
-      features: ["App Marketing", "SMS Campaigns", "Mobile UX", "Location-Based Marketing"]
+      features: ["App Marketing", "SMS Campaigns", "Mobile UX", "Location-Based Marketing"],
+      href: "/services/mobile-marketing"
     }
   ];
 
   return (
-    <section id="services" className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="services" className="relative pt-24 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-slate-900/30 to-background"></div>
@@ -71,9 +76,10 @@ const EleosServices = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <div 
+            <a 
               key={index} 
-              className="group p-8 rounded-3xl glass border border-white/10 hover:border-violet-500/30 hover-lift-lg transition-all duration-300"
+              href={service.href}
+              className="group p-8 rounded-3xl glass border border-white/10 hover:border-violet-500/30 hover-lift-lg transition-all duration-300 cursor-pointer block"
             >
               <div className="w-16 h-16 mb-6 bg-gradient-to-r from-violet-600 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <service.icon size={32} className="text-white" />
@@ -95,17 +101,8 @@ const EleosServices = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </a>
           ))}
-        </div>
-        
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            className="group bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white px-8 py-6 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-violet-500/25"
-          >
-            Explore All Services
-          </Button>
         </div>
       </div>
     </section>

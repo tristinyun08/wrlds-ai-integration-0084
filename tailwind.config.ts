@@ -79,7 +79,8 @@ export default {
 			fontFamily: {
 				'space': ['Space Grotesk', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
-				'display': ['Space Grotesk', 'sans-serif'],
+				'display': ['Volkoserif Display Medium', 'Playfair Display', 'Space Grotesk', 'sans-serif'],
+				'volkoserif': ['Volkoserif Display Medium', 'Playfair Display', 'serif'],
 			},
 			keyframes: {
 				'accordion-down': {

@@ -41,21 +41,25 @@ const EleosHero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button 
-            size="lg" 
-            className="group bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white px-8 py-6 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-105 hover-lift shadow-lg hover:shadow-violet-500/25"
-          >
-            Get Started Today
-            <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <a href="/contact">
+            <Button 
+              size="lg" 
+              className="group bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white px-8 py-6 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-105 hover-lift shadow-lg hover:shadow-violet-500/25"
+            >
+              Get Started Today
+              <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
           
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="px-8 py-6 text-lg font-semibold rounded-2xl border-2 border-violet-500/30 text-foreground hover:bg-violet-500/10 transition-all duration-300 glass"
-          >
-            View Our Work
-          </Button>
+          <a href="/portfolio">
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="px-8 py-6 text-lg font-semibold rounded-2xl border-2 border-violet-500/30 text-foreground hover:bg-violet-500/10 transition-all duration-300 glass"
+            >
+              View Our Work
+            </Button>
+          </a>
         </div>
 
         {/* Stats */}

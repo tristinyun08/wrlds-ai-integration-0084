@@ -52,7 +52,7 @@ const EleosAbout = () => {
         </div>
 
         {/* Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
             <div 
               key={index} 
@@ -65,15 +65,6 @@ const EleosAbout = () => {
               <p className="text-muted-foreground">{value.description}</p>
             </div>
           ))}
-        </div>
-        
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            className="group bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white px-8 py-6 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-violet-500/25"
-          >
-            Learn About Our Process
-          </Button>
         </div>
       </div>
     </section>

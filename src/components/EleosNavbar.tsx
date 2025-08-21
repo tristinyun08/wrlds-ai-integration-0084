@@ -6,11 +6,11 @@ const EleosNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -19,9 +19,13 @@ const EleosNavbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-violet-600 to-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">E</span>
+            <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden">
+                <img 
+                  src="https://media.licdn.com/dms/image/v2/D4E0BAQG2jeR4qosUqA/company-logo_100_100/company-logo_100_100/0/1730579467389/eleos_marketing_logo?e=1758758400&v=beta&t=JRsGu5Hm35UKLtWHslljO22UimkVrzG1-VF-h89taNY" 
+                  alt="Eleos Marketing Group Logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <div className="text-xl font-bold text-foreground">
@@ -33,7 +37,7 @@ const EleosNavbar = () => {
                   MARKETING GROUP
                 </div>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -49,11 +53,6 @@ const EleosNavbar = () => {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
-              <Button
-                className="bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
-              >
-                Get Quote
-              </Button>
             </div>
           </div>
 
@@ -85,13 +84,6 @@ const EleosNavbar = () => {
                 {item.name}
               </a>
             ))}
-            <div className="pt-4">
-              <Button
-                className="w-full bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white py-3 rounded-xl"
-              >
-                Get Quote
-              </Button>
-            </div>
           </div>
         </div>
       )}

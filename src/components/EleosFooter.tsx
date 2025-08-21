@@ -1,11 +1,26 @@
-import { Facebook, Twitter, Instagram, Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 
 const EleosFooter = () => {
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/eleosmarketinggroup", label: "Instagram" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/eleos-marketing", label: "LinkedIn" },
+  ];
+
+  const quickLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  const services = [
+    { name: "Social Media Marketing", href: "/services/social-media-marketing" },
+    { name: "Web Design & Development", href: "/services/web-design-development" },
+    { name: "Content Creation", href: "/services/content-creation" },
+    { name: "SEO & SEM", href: "/services/seo-sem" },
+    { name: "Digital Strategy", href: "/services/digital-strategy" },
+    { name: "Mobile Marketing", href: "/services/mobile-marketing" },
   ];
 
   return (
@@ -15,8 +30,12 @@ const EleosFooter = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">E</span>
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                <img 
+                  src="https://media.licdn.com/dms/image/v2/D4E0BAQG2jeR4qosUqA/company-logo_100_100/company-logo_100_100/0/1730579467389/eleos_marketing_logo?e=1758758400&v=beta&t=JRsGu5Hm35UKLtWHslljO22UimkVrzG1-VF-h89taNY" 
+                  alt="Eleos Marketing Group Logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <div className="text-xl font-bold text-foreground">
@@ -40,6 +59,8 @@ const EleosFooter = () => {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-muted-foreground hover:text-violet-400 hover:bg-violet-500/20 transition-all duration-300"
                   aria-label={social.label}
                 >
@@ -53,13 +74,13 @@ const EleosFooter = () => {
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              {["Home", "About", "Services", "Portfolio", "Contact"].map((item) => (
-                <li key={item}>
+              {quickLinks.map((item) => (
+                <li key={item.name}>
                   <a 
-                    href={`#${item.toLowerCase()}`}
+                    href={item.href}
                     className="text-muted-foreground hover:text-violet-400 transition-colors duration-200"
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </li>
               ))}
@@ -70,13 +91,13 @@ const EleosFooter = () => {
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-6">Services</h3>
             <ul className="space-y-3">
-              {["Social Media", "Web Design", "Content Creation", "SEO", "Digital Strategy"].map((item) => (
-                <li key={item}>
+              {services.map((item) => (
+                <li key={item.name}>
                   <a 
-                    href="#services"
+                    href={item.href}
                     className="text-muted-foreground hover:text-violet-400 transition-colors duration-200"
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </li>
               ))}
@@ -91,17 +112,7 @@ const EleosFooter = () => {
               © 2024 Eleos Marketing Group. All rights reserved.
             </p>
             
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-muted-foreground hover:text-violet-400 transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-violet-400 transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-violet-400 transition-colors">
-                Cookie Policy
-              </a>
-            </div>
+
           </div>
         </div>
       </div>

@@ -49,7 +49,7 @@ const EleosTestimonials = () => {
   };
 
   return (
-    <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative pt-16 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-slate-900/30 to-background"></div>
       
