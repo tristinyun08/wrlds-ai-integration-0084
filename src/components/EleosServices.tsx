@@ -47,7 +47,7 @@ const EleosServices = () => {
   ];
 
   return (
-    <section id="services" className="relative pt-24 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="services" className="relative pt-32 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-slate-900/30 to-background"></div>

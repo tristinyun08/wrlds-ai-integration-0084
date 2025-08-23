@@ -13,7 +13,7 @@ const About = () => {
         keywords={['about us', 'mission', 'vision', 'marketing agency', 'nonprofit marketing']}
       />
       <EleosNavbar />
-      <div className="pt-20 pb-8">
+      <div className="pt-2.5 pb-8">
         <EleosAbout />
       </div>
       <EleosFooter />
