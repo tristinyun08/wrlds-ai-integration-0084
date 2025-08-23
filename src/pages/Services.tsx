@@ -1,6 +1,5 @@
 import EleosNavbar from '@/components/EleosNavbar';
 import EleosServices from '@/components/EleosServices';
-import EleosTestimonials from '@/components/EleosTestimonials';
 import EleosFooter from '@/components/EleosFooter';
 import SEO from '@/components/SEO';
 
@@ -15,7 +14,6 @@ const Services = () => {
       <EleosNavbar />
       <div className="pt-20 pb-8">
         <EleosServices />
-        <EleosTestimonials />
       </div>
       <EleosFooter />
     </div>

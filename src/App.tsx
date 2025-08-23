@@ -29,6 +29,7 @@ import Careers from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Blog from "./pages/Blog";
 import BlogPostDetail from "./pages/BlogPostDetail";
+import Testimonials from "./pages/Testimonials";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -63,6 +64,7 @@ const App = () => {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPostDetail />} />
+            <Route path="/testimonials" element={<Testimonials />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

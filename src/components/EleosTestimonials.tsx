@@ -66,6 +66,10 @@ const EleosTestimonials = () => {
               Clients Say
             </span>
           </h2>
+          
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Discover how we've helped nonprofits and businesses transform their digital presence and achieve remarkable results.
+          </p>
         </div>
 
         {/* Testimonial Cards Grid */}
