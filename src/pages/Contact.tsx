@@ -12,7 +12,7 @@ const Contact = () => {
         keywords={['contact us', 'get in touch', 'marketing consultation', 'free consultation', 'marketing agency']}
       />
       <EleosNavbar />
-      <div className="pt-20 pb-8">
+      <div className="pt-2.5 pb-8">
         <EleosContact />
       </div>
       <EleosFooter />

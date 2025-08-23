@@ -12,7 +12,7 @@ const Services = () => {
         keywords={['marketing services', 'digital marketing', 'web design', 'social media', 'consulting', 'no cost']}
       />
       <EleosNavbar />
-      <div className="pt-20 pb-8">
+      <div className="pt-2.5 pb-8">
         <EleosServices />
       </div>
       <EleosFooter />
