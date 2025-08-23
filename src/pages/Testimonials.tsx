@@ -57,7 +57,7 @@ const Testimonials = () => {
             {/* Page Header */}
       <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+                                                                                                                                                                                                                                                                                                                                                               <div className="text-center -mb-4">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600/20 to-purple-600/20 backdrop-blur-sm border border-violet-500/20 rounded-full px-6 py-3 mb-8 glass">
             <Star size={16} className="text-violet-400" />
             <span className="text-sm font-medium text-violet-200">Client Success Stories</span>
@@ -81,7 +81,7 @@ const Testimonials = () => {
        <section className="relative pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Testimonial Cards Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
             {/* Featured Testimonial */}
             <div className="lg:col-span-2">
               <div className="relative p-10 rounded-3xl glass border border-white/10 hover:border-violet-500/30 transition-all duration-300 h-full">
